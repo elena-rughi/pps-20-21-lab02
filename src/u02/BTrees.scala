@@ -1,5 +1,10 @@
 package u02
 
+/*
+  here the binary tree has values only in leaf nodes
+  the tree in package u02aula has values in every node
+ */
+
 object BTrees extends App {
 
   // A custom and generic binary tree of elements of type A
@@ -10,7 +15,7 @@ object BTrees extends App {
 
     def size[A](t: Tree[A]): Int = t match {
       case Branch(l, r) => size(l) + size(r)
-      case _ => 1
+      case _ => 1 //empty tree
     }
 
     def find[A](t: Tree[A], elem: A): Boolean = t match {
